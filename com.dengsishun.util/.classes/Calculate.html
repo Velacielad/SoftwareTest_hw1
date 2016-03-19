@@ -1,0 +1,134 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: Calculate</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.dengsishun.util</a> ]
+</div>
+
+<h1>Coverage Summary for Class: Calculate (com.dengsishun.util)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Calculate</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (5/ 5)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (19/ 19)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.dengsishun.util;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;
+<i>4</i>&nbsp;import java.util.Arrays;
+<i>5</i>&nbsp;
+<i>6</i>&nbsp;/**
+<i>7</i>&nbsp; * Created by Velacielad on 2016/3/18.
+<i>8</i>&nbsp; */
+<b class="fc"><i>9</i>&nbsp;public class Calculate {</b>
+<i>10</i>&nbsp;    public boolean isTriangle(int a, int b, int c){
+<b class="fc"><i>11</i>&nbsp;        int[] edge = {a,b,c};</b>
+<b class="fc"><i>12</i>&nbsp;        Arrays.sort(edge);</b>
+<b class="fc"><i>13</i>&nbsp;        if ( (edge[0]+edge[1]) &lt;= edge[2]){</b>
+<b class="fc"><i>14</i>&nbsp;            return false;</b>
+<i>15</i>&nbsp;        }
+<i>16</i>&nbsp;        else
+<b class="fc"><i>17</i>&nbsp;            return true;</b>
+<i>18</i>&nbsp;    }
+<i>19</i>&nbsp;
+<i>20</i>&nbsp;    public boolean isEqu(int a, int b, int c) {
+<b class="fc"><i>21</i>&nbsp;        if (a == b &amp;&amp; b == c){</b>
+<b class="fc"><i>22</i>&nbsp;            return true;</b>
+<i>23</i>&nbsp;        }
+<i>24</i>&nbsp;        else
+<b class="fc"><i>25</i>&nbsp;            return false;</b>
+<i>26</i>&nbsp;    }
+<i>27</i>&nbsp;
+<i>28</i>&nbsp;    public boolean isIso(int a, int b,int c){
+<b class="fc"><i>29</i>&nbsp;        if(a == b || b == c || c == a){</b>
+<b class="fc"><i>30</i>&nbsp;            return true;</b>
+<i>31</i>&nbsp;        }
+<i>32</i>&nbsp;        else
+<b class="fc"><i>33</i>&nbsp;            return false;</b>
+<i>34</i>&nbsp;    }
+<i>35</i>&nbsp;
+<i>36</i>&nbsp;    public String judgment(int a,int b,int c){
+<b class="fc"><i>37</i>&nbsp;        if (isTriangle(a,b,c)){</b>
+<b class="fc"><i>38</i>&nbsp;            if (isEqu(a,b,c)){</b>
+<b class="fc"><i>39</i>&nbsp;                return &quot;equilateral&quot;;</b>
+<i>40</i>&nbsp;            }
+<b class="fc"><i>41</i>&nbsp;            else if (isIso(a,b,c)){</b>
+<b class="fc"><i>42</i>&nbsp;                return &quot;isosceles&quot;;</b>
+<i>43</i>&nbsp;            }
+<i>44</i>&nbsp;            else
+<b class="fc"><i>45</i>&nbsp;                return &quot;scalene&quot;;</b>
+<i>46</i>&nbsp;        }
+<i>47</i>&nbsp;        else {
+<b class="fc"><i>48</i>&nbsp;            return &quot;error&quot;;</b>
+<i>49</i>&nbsp;        }
+<i>50</i>&nbsp;    }
+<i>51</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2016-03-19 16:30</div>
+</div>
+</body>
+</html>
